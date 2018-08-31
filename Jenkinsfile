@@ -20,10 +20,8 @@ pipeline {
 
         stage ('Deployment') {
             steps {
-		docker.withServer('tcp://10.135.107.29:2376') 
-        	sh 'docker stack deploy -c docker-compose.yml votingapp'
-		
-		}
+                sh 'docker stack deploy -c docker-compose.yml votingapp'
+            }
         }
 
     }
