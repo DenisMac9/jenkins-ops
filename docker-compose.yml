@@ -24,7 +24,7 @@ services:
       placement:
         constraints: [node.role == manager]
   vote:
-    image: denismac9/vote:before
+    image: denismac9/vote:master
     ports:
       - 5000:80
     networks:
@@ -38,7 +38,7 @@ services:
       restart_policy:
         condition: on-failure
   result:
-    image: denismac9/result:before
+    image: denismac9/result:master
     ports:
       - 5001:80
     networks:
